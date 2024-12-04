@@ -34,9 +34,9 @@ int** initialize(int** n, int size) {
     }
     for (int i = 0; i < mid; i++) {
         for (int j = mid; j < size; j++) {
-            if (rand() % 2) { 
-                n[i][j] = 1;
-                n[j][i] = 1; 
+            if (rand () % 2) {
+            n[i][j] = 1;
+            n[j][i] = 1;
                 hasEdge = true;
             }
         }
@@ -159,9 +159,9 @@ int main() {
         cin >> k;
 
         if (k == 1) {
-            cout << "Введите количество вершин (больше 2): ";
+            cout << "Введите количество вершин (больше 2 и четное): ";
             cin >> size;
-            if (size > 2) {
+            if (size > 2&& size%2==0) {
                 n = create_mass(size);
                 if (n)
                     cout << "Граф создан!\n";
